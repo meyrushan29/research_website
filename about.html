@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Well360 Health Analytics Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">W</span>
+                <span class="logo-text">Well<span class="logo-accent">360</span></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="domain.html" class="nav-link">Domain</a></li>
+                <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+                <li><a href="documents.html" class="nav-link">Documents</a></li>
+                <li><a href="presentations.html" class="nav-link">Presentations</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1>About Us</h1>
+            <p>Meet the team behind the AI-Driven Health Analyzer</p>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="about-overview">
+        <div class="section-container">
+            <span class="section-eyebrow">About Us</span>
+            <h2>Project Overview</h2>
+            <div class="about-content">
+                <p>
+                    Well360 is a production-ready, AI-powered health analytics platform developed by a dedicated team of
+                    AI, computer vision, and full-stack specialists. The system delivers three independent ML-driven modules —
+                    Hydration, Fitness, and Mental Health — over a shared FastAPI backend, SQLAlchemy database, and JWT
+                    authentication layer, with a Flutter cross-platform frontend.
+                </p>
+                <p>
+                    This project represents the culmination of extensive research and development across XGBoost modelling,
+                    deep learning (MobileNetV2, ResNet, custom CNNs), computer vision (MediaPipe, MTCNN, FER), audio
+                    signal processing (Librosa), explainable AI (SHAP, Grad-CAM), and mobile/backend software engineering.
+                    The platform ships 7+ trained ML models, 30+ REST API endpoints, and 10 database models.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="team-section">
+        <div class="section-container">
+            <span class="section-eyebrow">About Us</span>
+            <h2>Meet Our Team !</h2>
+            <p class="team-intro">
+                Our multi-disciplinary team combines expertise in machine learning, image processing, 
+                and full-stack development to deliver a comprehensive health analytics solution.
+            </p>
+            
+            <div class="team-grid">
+                <!-- Team Member 1: Meyrushan (Leader) -->
+                <div class="team-member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">ME</div>
+                        <div class="member-header-info">
+                            <h3 class="member-name">Meyrushan</h3>
+                            <p class="member-role">Project Leader · Machine Learning Engineer</p>
+                        </div>
+                    </div>
+                    <div class="member-body">
+                        <div class="member-responsibility">
+                            <span class="resp-eyebrow">Primary Responsibility</span>
+                            <p class="resp-text">💧 Hydration Module — Form-based XGBoost Pipeline + Lip Image Analysis</p>
+                        </div>
+                        <div class="member-contrib">
+                            <h4 class="member-section-title">Key Contributions</h4>
+                            <ul class="member-list">
+                                <li>Project leadership and coordination</li>
+                                <li>17-field health form data collection and preprocessing</li>
+                                <li>20+ feature engineering (BMI, Hydration Index, Heat Index, Water Deficit, Activity Factor)</li>
+                                <li>XGBoost regressor (water intake) + classifier (risk level) training</li>
+                                <li>SHAP explainability for hydration form predictions</li>
+                                <li>MobileNetV2 CNN for lip-image dehydration detection (Base64 → MediaPipe crop → classification)</li>
+                                <li>Grad-CAM heatmap generation for lip image analysis</li>
+                                <li>Hyperparameter optimisation and model validation</li>
+                            </ul>
+                        </div>
+                        <div class="member-skills-wrap">
+                            <h4 class="member-section-title">Technical Skills</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">XGBoost</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">MobileNetV2</span>
+                                <span class="skill-tag">MediaPipe</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">SHAP</span>
+                                <span class="skill-tag">Grad-CAM</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">SQLAlchemy</span>
+                                <span class="skill-tag">Pandas · NumPy</span>
+                            </div>
+                        </div>
+                        <p class="member-email">📧 it22564818@my.sliit.lk</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2: Laxshika -->
+                <div class="team-member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">LA</div>
+                        <div class="member-header-info">
+                            <h3 class="member-name">Laxshika</h3>
+                            <p class="member-role">AI Engineer · Fitness Module Specialist</p>
+                        </div>
+                    </div>
+                    <div class="member-body">
+                        <div class="member-responsibility">
+                            <span class="resp-eyebrow">Primary Responsibility</span>
+                            <p class="resp-text">🏋️ Fitness Module — Video-based Pose Estimation &amp; Form Analysis</p>
+                        </div>
+                        <div class="member-contrib">
+                            <h4 class="member-section-title">Key Contributions</h4>
+                            <ul class="member-list">
+                                <li>FitnessVideoProcessor: MediaPipe pose estimation (complexity=1) with FRAME_SKIP=2 and 480p cap</li>
+                                <li>Per-rep breakdown with confidence scoring and exercise recognition</li>
+                                <li>Joint angle tracking and heatmap visualisation</li>
+                                <li>30-session muscle-group radar chart system (MuscleRadarHistory)</li>
+                                <li>Personalized body-balance recommendations based on session history</li>
+                                <li>Exercise XGBoost model integration and fitness API endpoint development</li>
+                            </ul>
+                        </div>
+                        <div class="member-skills-wrap">
+                            <h4 class="member-section-title">Technical Skills</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MediaPipe</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">XGBoost</span>
+                                <span class="skill-tag">Video Processing</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">Pose Estimation</span>
+                                <span class="skill-tag">Biomechanics Analysis</span>
+                            </div>
+                        </div>
+                        <p class="member-email">📧 it22596802@my.sliit.lk</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3: Kavilakshan -->
+                <div class="team-member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">KA</div>
+                        <div class="member-header-info">
+                            <h3 class="member-name">Kavilakshan</h3>
+                            <p class="member-role">Full Stack Developer · Mental Health Module</p>
+                        </div>
+                    </div>
+                    <div class="member-body">
+                        <div class="member-responsibility">
+                            <span class="resp-eyebrow">Primary Responsibility</span>
+                            <p class="resp-text">🧠 Mental Health Module + Backend Architecture + Flutter Frontend</p>
+                        </div>
+                        <div class="member-contrib">
+                            <h4 class="member-section-title">Key Contributions</h4>
+                            <ul class="member-list">
+                                <li>FER + MTCNN video emotion detection (7 emotions) with CLAHE + bilateral filter preprocessing</li>
+                                <li>Valence-Arousal (Russell circumplex) stress mapping and Haar cascade fallback</li>
+                                <li>Librosa MFCC + energy/pitch/formant audio emotion analysis (Random Forest)</li>
+                                <li>UserEmotionProfile chronic stress detection and recommendation rotation</li>
+                                <li>FastAPI architecture (5 routers, core auth/DB layer) and 10 SQLAlchemy models</li>
+                                <li>Flutter frontend (30+ screens), JWT + Google OAuth2, Docker deployment</li>
+                            </ul>
+                        </div>
+                        <div class="member-skills-wrap">
+                            <h4 class="member-section-title">Technical Skills</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">TensorFlow / Keras</span>
+                                <span class="skill-tag">MTCNN · FER</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">Librosa</span>
+                                <span class="skill-tag">Scikit-learn</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">SQLAlchemy</span>
+                                <span class="skill-tag">Flutter · Dart</span>
+                                <span class="skill-tag">JWT · OAuth2</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <p class="member-email">📧 it22116338@my.sliit.lk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisors Section -->
+    <section class="advisors-section">
+        <div class="section-container">
+            <span class="section-eyebrow">Guidance</span>
+            <h2>Faculty Advisors</h2>
+            <div class="advisors-grid">
+                <div class="advisor-card">
+                    <h3>Supervisor</h3>
+                    <p class="advisor-name">Dr. Kapila Dissanayaka</p>
+                    <p class="advisor-title">Department of Computer Science</p>
+                    <p>
+                        Provides strategic guidance, research oversight, and ensures alignment with academic
+                        standards and institutional expectations throughout the project lifecycle.
+                    </p>
+                </div>
+                <div class="advisor-card">
+                    <h3>Co-Supervisor</h3>
+                    <p class="advisor-name">Fathima Fanoon</p>
+                    <p class="advisor-title">AI &amp; Machine Learning Specialist</p>
+                    <p>
+                        Offers technical expertise in ML/DL methodologies, model optimization, and best practices
+                        in AI-driven health system design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Skills Matrix -->
+    <section class="skills-section">
+        <div class="section-container">
+            <span class="section-eyebrow">Capabilities</span>
+            <h2>Team Expertise Matrix</h2>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 95%;">
+                            <span class="skill-label">95%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Deep Learning & Computer Vision</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 92%;">
+                            <span class="skill-label">92%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%;">
+                            <span class="skill-label">90%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 88%;">
+                            <span class="skill-label">88%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database Design</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 87%;">
+                            <span class="skill-label">87%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Healthcare Domain Knowledge</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 85%;">
+                            <span class="skill-label">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="project-stats">
+        <div class="section-container">
+            <h2>Project Highlights</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <p>ML Modules (Hydration · Fitness · Mental Health)</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7+</div>
+                    <p>Trained ML Models</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <p>REST API Endpoints</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <p>Database Models</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">90+</div>
+                    <p>Backend Python Files</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <p>Flutter UI Screens</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Collaboration -->
+    <section class="collaboration-section">
+        <div class="section-container">
+            <h2>Our Approach</h2>
+            <div class="collaboration-content">
+                <div class="approach-item">
+                    <h3>🔄 Iterative Development</h3>
+                    <p>
+                        We follow agile methodologies with regular iterations, continuous testing, and 
+                        incremental improvements to ensure quality and responsiveness to feedback.
+                    </p>
+                </div>
+                <div class="approach-item">
+                    <h3>🤝 Cross-functional Collaboration</h3>
+                    <p>
+                        ML, AI, and development experts work closely together, sharing knowledge and 
+                        ensuring seamless integration across all system components.
+                    </p>
+                </div>
+                <div class="approach-item">
+                    <h3>📊 Data-Driven Decisions</h3>
+                    <p>
+                        All decisions are informed by experimental results, performance metrics, and 
+                        rigorous evaluation to optimize system performance.
+                    </p>
+                </div>
+                <div class="approach-item">
+                    <h3>📚 Continuous Learning</h3>
+                    <p>
+                        Team members stay updated with latest research, attend seminars, and incorporate 
+                        state-of-the-art techniques into the project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo"><span class="footer-logo-mark">W</span>Well<span>360</span></a>
+                    <p>An AI-powered health analytics platform combining Hydration, Fitness, and Mental Health monitoring through advanced ML models and a Flutter cross-platform frontend.</p>
+                    <span class="footer-badge">🎓 SLIIT Final Year Research Project</span>
+                    <span class="footer-badge">📅 2025 – 2026</span>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="domain.html">Domain</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="documents.html">Documents</a></li>
+                        <li><a href="presentations.html">Presentations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="domain.html">Tech Stack</a></li>
+                        <li><a href="domain.html">AI Modules</a></li>
+                        <li><a href="milestones.html">Timeline</a></li>
+                        <li><a href="about.html">Team</a></li>
+                        <li><a href="documents.html">Final Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Team Contact</h4>
+                    <ul>
+                        <li><div class="footer-email"><strong>Meyrushan</strong><a href="mailto:it22564818@my.sliit.lk">it22564818@my.sliit.lk</a></div></li>
+                        <li><div class="footer-email"><strong>Laxshika</strong><a href="mailto:it22596802@my.sliit.lk">it22596802@my.sliit.lk</a></div></li>
+                        <li><div class="footer-email"><strong>Kavilakshan</strong><a href="mailto:it22116338@my.sliit.lk">it22116338@my.sliit.lk</a></div></li>
+                        <li><a href="contact.html" style="color:var(--violet-light);font-weight:600;">→ Send a Message</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p>&copy; 2025 Well360 · SLIIT Final Year Research Project · All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Home</a>
+                    <a href="domain.html">Domain</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script src="main.js"></script>
+</body>
+</html>

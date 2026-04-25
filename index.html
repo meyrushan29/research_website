@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well360 — AI-Powered Health Analytics Platform</title>
+    <meta name="description" content="Well360 is a production-ready AI health analytics platform with Hydration, Fitness, and Mental Health modules powered by XGBoost, MediaPipe, and deep learning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ── Navigation ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">W</span>
+                <span class="logo-text">Well<span class="logo-accent">360</span></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="domain.html" class="nav-link">Domain</a></li>
+                <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+                <li><a href="documents.html" class="nav-link">Documents</a></li>
+                <li><a href="presentations.html" class="nav-link">Presentations</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="hero-badge-dot"></span>
+                SLIIT Final Year Research Project · 2025–2026
+            </div>
+            <h1 class="hero-title reveal">
+                Meet <span class="grad-text">Well360</span><br>
+                Your AI Health<br>
+                <span class="typewriter-wrap">
+                    <span id="typewriter" data-words="Companion|Analyst|Coach|Monitor"></span><span class="typewriter-cursor"></span>
+                </span>
+            </h1>
+            <p class="hero-description reveal">
+                A production-ready, AI-powered health analytics platform with a Python/FastAPI backend
+                and Flutter mobile frontend. Three independent ML-driven modules — Hydration, Fitness, and
+                Mental Health — over one unified auth and database layer.
+            </p>
+            <div class="hero-buttons reveal">
+                <a href="domain.html" class="btn btn-primary">Explore Modules</a>
+                <a href="about.html" class="btn btn-secondary">Meet the Team</a>
+            </div>
+            <div class="hero-stat-badges reveal">
+                <span class="hero-stat-badge"><strong>3</strong> AI Modules</span>
+                <span class="hero-stat-badge"><strong>7+</strong> ML Models</span>
+                <span class="hero-stat-badge"><strong>30+</strong> API Endpoints</span>
+                <span class="hero-stat-badge"><strong>Flutter</strong> Cross-platform</span>
+                <span class="hero-stat-badge"><strong>Docker</strong> Production-ready</span>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-element"></div>
+        </div>
+    </section>
+
+    <!-- ── Stats Strip ── -->
+    <div class="stats-strip">
+        <div class="stats-strip-grid">
+            <div class="stat-strip-item reveal">
+                <span class="stat-strip-num" data-counter data-target="90" data-suffix="+">90+</span>
+                <span class="stat-strip-label">Python Files</span>
+            </div>
+            <div class="stat-strip-item reveal">
+                <span class="stat-strip-num" data-counter data-target="30" data-suffix="+">30+</span>
+                <span class="stat-strip-label">REST API Endpoints</span>
+            </div>
+            <div class="stat-strip-item reveal">
+                <span class="stat-strip-num" data-counter data-target="7" data-suffix="+">7+</span>
+                <span class="stat-strip-label">Trained ML Models</span>
+            </div>
+            <div class="stat-strip-item reveal">
+                <span class="stat-strip-num" data-counter data-target="10">10</span>
+                <span class="stat-strip-label">Database Models</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── CTA Banner ── -->
+    <section class="cta-banner">
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+        <div class="cta-banner-inner">
+            <span class="section-eyebrow light reveal">Research Project</span>
+            <h2 class="reveal">Advancing Healthcare with <span>Artificial Intelligence</span></h2>
+            <p class="reveal">Well360 combines XGBoost, MobileNetV2, MediaPipe, ResNet, and FER-based emotion detection into one unified platform — with SHAP and Grad-CAM explainability built in.</p>
+            <div class="cta-banner-actions reveal">
+                <a href="domain.html" class="btn btn-primary">View Research Domain</a>
+                <a href="documents.html" class="btn btn-secondary">Access Documents</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 3 ML Modules ── -->
+    <section class="modules-section">
+        <div class="section-container">
+            <span class="section-eyebrow reveal">Core Platform</span>
+            <h2 class="reveal">Three AI Health Modules</h2>
+            <p class="section-subtitle reveal">Each module is an independent ML pipeline sharing one FastAPI backend, SQLAlchemy database, and JWT auth layer.</p>
+            <div class="modules-grid reveal-group">
+
+                <!-- Hydration -->
+                <div class="module-card mc-hydration">
+                    <div class="module-card-header">
+                        <span class="module-card-emoji">💧</span>
+                        <h3>Hydration Module</h3>
+                        <p class="module-card-subtitle">XGBoost · MobileNetV2 · SHAP · Grad-CAM</p>
+                    </div>
+                    <div class="module-card-body">
+                        <p>Two prediction pipelines: a form-based XGBoost model and a lip-image MobileNetV2 CNN — both with full explainability.</p>
+                        <ul class="module-feature-list">
+                            <li>17-field health form with 20+ engineered features</li>
+                            <li>XGBoost regressor (water litres) + classifier (risk level)</li>
+                            <li>MobileNetV2 CNN lip-image dehydration detection</li>
+                            <li>SHAP values + Grad-CAM heatmaps for XAI</li>
+                            <li>Real-time weather integration (OpenMeteo)</li>
+                        </ul>
+                    </div>
+                    <div class="module-card-footer">
+                        <span class="mc-tag">XGBoost ~1MB</span>
+                        <span class="mc-tag">MobileNetV2 ~12MB</span>
+                        <span class="mc-tag">SHAP</span>
+                        <span class="mc-tag">Grad-CAM</span>
+                    </div>
+                </div>
+
+                <!-- Fitness -->
+                <div class="module-card mc-fitness">
+                    <div class="module-card-header">
+                        <span class="module-card-emoji">🏋️</span>
+                        <h3>Fitness Module</h3>
+                        <p class="module-card-subtitle">MediaPipe · Pose Estimation · XGBoost</p>
+                    </div>
+                    <div class="module-card-body">
+                        <p>Video-based exercise recognition with real-time pose estimation, per-rep form scoring, and 30-session muscle radar tracking.</p>
+                        <ul class="module-feature-list">
+                            <li>MediaPipe pose estimation (complexity=1, FRAME_SKIP=2)</li>
+                            <li>Per-rep breakdown with confidence scoring</li>
+                            <li>Joint angle tracking and heatmap visualisation</li>
+                            <li>30-session muscle-group radar charts</li>
+                            <li>Personalized body-balance recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="module-card-footer">
+                        <span class="mc-tag">MediaPipe</span>
+                        <span class="mc-tag">480p optimised</span>
+                        <span class="mc-tag">Exercise XGBoost ~2MB</span>
+                    </div>
+                </div>
+
+                <!-- Mental Health -->
+                <div class="module-card mc-mental">
+                    <div class="module-card-header">
+                        <span class="module-card-emoji">🧠</span>
+                        <h3>Mental Health Module</h3>
+                        <p class="module-card-subtitle">FER · MTCNN · ResNet · Librosa</p>
+                    </div>
+                    <div class="module-card-body">
+                        <p>Video emotion detection (FER/MTCNN) and Librosa audio analysis, with per-user chronic stress tracking and rotating recommendations.</p>
+                        <ul class="module-feature-list">
+                            <li>7-emotion detection: Angry, Fear, Happy, Sad + more</li>
+                            <li>Valence-Arousal (Russell circumplex) stress mapping</li>
+                            <li>Librosa MFCC audio emotion analysis (Random Forest)</li>
+                            <li>Chronic stress detection (≥60% negative / 10 sessions)</li>
+                            <li>Recommendation rotation — no repeats per user</li>
+                        </ul>
+                    </div>
+                    <div class="module-card-footer">
+                        <span class="mc-tag">ResNet 44MB</span>
+                        <span class="mc-tag">FER + MTCNN</span>
+                        <span class="mc-tag">Librosa</span>
+                        <span class="mc-tag">Random Forest</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Abstract ── -->
+    <section class="abstract">
+        <div class="section-container">
+            <span class="section-eyebrow reveal">Overview</span>
+            <h2 class="reveal">Project Abstract</h2>
+            <div class="abstract-content">
+                <p class="reveal">
+                    Well360 is a production-ready, AI-powered health analytics platform built on FastAPI (Python) and Flutter.
+                    It delivers three independent ML-driven health modules over a shared JWT-authenticated, SQLAlchemy-backed database layer:
+                </p>
+                <ul class="abstract-list reveal">
+                    <li><strong>Hydration Module:</strong> XGBoost regressor + classifier for form-based water-intake prediction, plus MobileNetV2 CNN lip-image dehydration detection with SHAP and Grad-CAM explainability</li>
+                    <li><strong>Fitness Module:</strong> Real-time video-based exercise recognition using MediaPipe pose estimation, per-rep form scoring, joint-angle heatmaps, and 30-session muscle-radar charts</li>
+                    <li><strong>Mental Health Module:</strong> FER/MTCNN video emotion detection (7 emotions, valence-arousal mapping) with Librosa MFCC audio emotion analysis and per-user chronic-stress tracking</li>
+                </ul>
+                <p class="reveal">
+                    The platform serves 30+ REST API endpoints, manages 10 database models, and ships 7+ trained ML models
+                    deployable via Docker. The Flutter frontend targets Android, iOS, and web with platform-aware LAN auto-discovery.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Key Features ── -->
+    <section class="features-section-premium">
+        <div class="section-container">
+            <span class="section-eyebrow reveal">Capabilities</span>
+            <h2 class="reveal">What Makes Well360 Different</h2>
+            <div class="features-grid-premium reveal-group">
+                <div class="feature-card-premium">
+                    <div class="fc-icon-wrap fc-blue">💧</div>
+                    <h3>Smart Hydration Tracking</h3>
+                    <p>XGBoost predicts daily water intake from a 17-field health form; MobileNetV2 detects dehydration from a lip selfie — both with SHAP and Grad-CAM explanations.</p>
+                </div>
+                <div class="feature-card-premium">
+                    <div class="fc-icon-wrap fc-green">🏋️</div>
+                    <h3>AI Fitness Coach</h3>
+                    <p>MediaPipe pose estimation analyses workout videos frame-by-frame, scores rep form, tracks joint angles, and renders 30-session muscle-group radar charts.</p>
+                </div>
+                <div class="feature-card-premium">
+                    <div class="fc-icon-wrap fc-violet">🧠</div>
+                    <h3>Mental Health Monitoring</h3>
+                    <p>FER + MTCNN detects 7 emotions from video; Librosa MFCC Random Forest classifies audio emotion; per-user chronic-stress detection flags negative patterns.</p>
+                </div>
+                <div class="feature-card-premium">
+                    <div class="fc-icon-wrap fc-cyan">🔍</div>
+                    <h3>Explainable AI (XAI)</h3>
+                    <p>SHAP values explain hydration predictions; Grad-CAM heatmaps highlight critical lip regions; per-frame emotion breakdowns provide full transparency.</p>
+                </div>
+                <div class="feature-card-premium">
+                    <div class="fc-icon-wrap fc-gold">🔐</div>
+                    <h3>Secure Auth Layer</h3>
+                    <p>JWT + bcrypt authentication with 50-hour token expiry, Google OAuth2 sign-in, and Bearer-token protected routes shared across all three health modules.</p>
+                </div>
+                <div class="feature-card-premium">
+                    <div class="fc-icon-wrap fc-pink">📱</div>
+                    <h3>Cross-Platform Flutter App</h3>
+                    <p>Flutter 3.0+ targets Android, iOS, and web; auto-discovers backend IP on LAN; uses platform-aware URLs for emulator, web, and real-device builds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Project Overview ── -->
+    <section class="overview">
+        <div class="section-container">
+            <span class="section-eyebrow reveal">Architecture</span>
+            <h2 class="reveal">Project Overview</h2>
+            <div class="overview-content">
+
+                <div class="overview-item ov-arch reveal">
+                    <div class="ov-card-glow"></div>
+                    <div class="ov-header">
+                        <div class="ov-icon-wrap ov-icon-violet">🏗️</div>
+                        <h3>System Architecture</h3>
+                    </div>
+                    <p class="ov-desc">Well360 runs three independent AI pipelines over a shared FastAPI backend, one SQLAlchemy ORM layer, and a unified JWT auth system.</p>
+                    <div class="ov-modules">
+                        <span class="ov-module mod-blue">💧 Hydration</span>
+                        <span class="ov-module mod-green">🏋️ Fitness</span>
+                        <span class="ov-module mod-purple">🧠 Mental Health</span>
+                    </div>
+                    <div class="ov-divider"></div>
+                    <div class="ov-footer-tags">
+                        <span class="ov-ftag">10 DB Models</span>
+                        <span class="ov-ftag">30+ Endpoints</span>
+                        <span class="ov-ftag">Docker Ready</span>
+                    </div>
+                </div>
+
+                <div class="overview-item ov-stack reveal">
+                    <div class="ov-card-glow"></div>
+                    <div class="ov-header">
+                        <div class="ov-icon-wrap ov-icon-cyan">⚡</div>
+                        <h3>Technology Stack</h3>
+                    </div>
+                    <div class="ov-tech-groups">
+                        <div class="ov-tech-group">
+                            <span class="ov-tech-label lbl-blue">Backend</span>
+                            <div class="ov-tech-tags">
+                                <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>PostgreSQL</span><span>Docker</span>
+                            </div>
+                        </div>
+                        <div class="ov-tech-group">
+                            <span class="ov-tech-label lbl-violet">ML / AI</span>
+                            <div class="ov-tech-tags">
+                                <span>XGBoost</span><span>PyTorch</span><span>TensorFlow</span><span>MediaPipe</span><span>MTCNN</span><span>FER</span><span>SHAP</span><span>Grad-CAM</span><span>Librosa</span>
+                            </div>
+                        </div>
+                        <div class="ov-tech-group">
+                            <span class="ov-tech-label lbl-cyan">Frontend</span>
+                            <div class="ov-tech-tags">
+                                <span>Flutter</span><span>Dart</span><span>fl_chart</span><span>Google Sign-In</span>
+                            </div>
+                        </div>
+                        <div class="ov-tech-group">
+                            <span class="ov-tech-label lbl-gold">Auth</span>
+                            <div class="ov-tech-tags">
+                                <span>JWT</span><span>bcrypt</span><span>OAuth2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-item ov-keystats reveal">
+                    <div class="ov-card-glow"></div>
+                    <div class="ov-header">
+                        <div class="ov-icon-wrap ov-icon-gold">📊</div>
+                        <h3>Key Stats</h3>
+                    </div>
+                    <div class="ov-stats-grid">
+                        <div class="ov-stat">
+                            <span class="ov-stat-num">90<span class="ov-stat-plus">+</span></span>
+                            <span class="ov-stat-label">Python Files</span>
+                        </div>
+                        <div class="ov-stat">
+                            <span class="ov-stat-num">30<span class="ov-stat-plus">+</span></span>
+                            <span class="ov-stat-label">API Endpoints</span>
+                        </div>
+                        <div class="ov-stat">
+                            <span class="ov-stat-num">7<span class="ov-stat-plus">+</span></span>
+                            <span class="ov-stat-label">ML Models</span>
+                        </div>
+                        <div class="ov-stat">
+                            <span class="ov-stat-num">10</span>
+                            <span class="ov-stat-label">DB Models</span>
+                        </div>
+                        <div class="ov-stat">
+                            <span class="ov-stat-num">30<span class="ov-stat-plus">+</span></span>
+                            <span class="ov-stat-label">Flutter Screens</span>
+                        </div>
+                        <div class="ov-stat">
+                            <span class="ov-stat-num">44<span class="ov-stat-plus">MB</span></span>
+                            <span class="ov-stat-label">Largest Model</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="footer-logo-mark">W</span>
+                        Well<span>360</span>
+                    </a>
+                    <p>An AI-powered health analytics platform combining Hydration, Fitness, and Mental Health monitoring through advanced ML models and a Flutter cross-platform frontend.</p>
+                    <span class="footer-badge">🎓 SLIIT Final Year Research Project</span>
+                    <span class="footer-badge">📅 2025 – 2026</span>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="domain.html">Domain</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="documents.html">Documents</a></li>
+                        <li><a href="presentations.html">Presentations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="domain.html">Tech Stack</a></li>
+                        <li><a href="domain.html">AI Modules</a></li>
+                        <li><a href="milestones.html">Timeline</a></li>
+                        <li><a href="about.html">Team</a></li>
+                        <li><a href="documents.html">Final Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Team Contact</h4>
+                    <ul>
+                        <li>
+                            <div class="footer-email">
+                                <strong>Meyrushan</strong>
+                                <a href="mailto:it22564818@my.sliit.lk">it22564818@my.sliit.lk</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="footer-email">
+                                <strong>Laxshika</strong>
+                                <a href="mailto:it22596802@my.sliit.lk">it22596802@my.sliit.lk</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="footer-email">
+                                <strong>Kavilakshan</strong>
+                                <a href="mailto:it22116338@my.sliit.lk">it22116338@my.sliit.lk</a>
+                            </div>
+                        </li>
+                        <li><a href="contact.html" style="color:var(--violet-light); font-weight:600;">→ Send a Message</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p>&copy; 2025 Well360 · SLIIT Final Year Research Project · All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Home</a>
+                    <a href="domain.html">Domain</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script src="main.js"></script>
+</body>
+</html>

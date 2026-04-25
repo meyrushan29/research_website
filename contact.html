@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Well360 Health Analytics Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">W</span>
+                <span class="logo-text">Well<span class="logo-accent">360</span></span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="domain.html" class="nav-link">Domain</a></li>
+                <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+                <li><a href="documents.html" class="nav-link">Documents</a></li>
+                <li><a href="presentations.html" class="nav-link">Presentations</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with the Well360 team</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="section-container">
+            <span class="section-eyebrow">Contact Us</span>
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <!-- Email Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p class="contact-label">Project Inquiries</p>
+                    <a href="mailto:it22564818@my.sliit.lk" class="contact-link">
+                        it22564818@my.sliit.lk
+                    </a>
+                    <p class="contact-note">
+                        For general inquiries, project information, and collaboration opportunities
+                    </p>
+                </div>
+
+                <!-- Phone Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p class="contact-label">Main Office</p>
+                    <a href="tel:+94117544801" class="contact-link">
+                        +94 11 754 4801
+                    </a>
+                    <p class="contact-note">
+                        Monday to Friday, 9:00 AM - 5:00 PM (Sri Lanka Time)
+                    </p>
+                </div>
+
+                <!-- Location Contact -->
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p class="contact-label">Department Address</p>
+                    <p class="contact-address">
+                        Department of Information Technology<br>
+                        SLIIT (Sri Lanka Institute of Information Technology)<br>
+                        New Kandy Road, Malabe<br>
+                        Sri Lanka 10115
+                    </p>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="contact-card">
+                    <div class="contact-icon">⏰</div>
+                    <h3>Office Hours</h3>
+                    <p class="contact-label">Availability</p>
+                    <div class="office-hours">
+                        <p><strong>Monday - Thursday:</strong> 9:00 AM - 6:00 PM</p>
+                        <p><strong>Friday:</strong> 9:00 AM - 5:00 PM</p>
+                        <p><strong>Saturday - Sunday:</strong> Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="section-container">
+            <span class="section-eyebrow">Send a Message</span>
+            <h2>Get in Touch</h2>
+            <div class="contact-form-split">
+                <!-- Form column -->
+                <div class="contact-form-col">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number (optional)"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="What is your inquiry about?"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Inquiry Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">-- Select a Category --</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="collaboration">Collaboration Proposal</option>
+                                <option value="research">Research Question</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Please enter your message here..."
+                                rows="6"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input
+                                type="checkbox"
+                                id="consent"
+                                name="consent"
+                                required
+                            >
+                            <label for="consent">
+                                I consent to contact regarding my inquiry
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-btn">Send Message</button>
+                        <p class="form-note">* Required fields</p>
+                    </form>
+                </div>
+
+                <!-- Side panel -->
+                <aside class="contact-side-panel">
+                    <p class="contact-side-title">Contact Details</p>
+
+                    <div class="contact-side-item">
+                        <div class="contact-side-icon">📧</div>
+                        <div class="contact-side-text">
+                            <p class="contact-side-label">Project Email</p>
+                            <p class="contact-side-value">
+                                <a href="mailto:it22564818@my.sliit.lk">it22564818@my.sliit.lk</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-side-item">
+                        <div class="contact-side-icon">📞</div>
+                        <div class="contact-side-text">
+                            <p class="contact-side-label">Phone</p>
+                            <p class="contact-side-value">
+                                <a href="tel:+94117544801">+94 11 754 4801</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-side-item">
+                        <div class="contact-side-icon">📍</div>
+                        <div class="contact-side-text">
+                            <p class="contact-side-label">Location</p>
+                            <p class="contact-side-value">Department of Information Technology<br>SLIIT, Malabe, Sri Lanka 10115</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-side-item">
+                        <div class="contact-side-icon">⏰</div>
+                        <div class="contact-side-text">
+                            <p class="contact-side-label">Office Hours</p>
+                            <p class="contact-side-value">Mon – Fri: 9:00 AM – 5:00 PM<br>Weekends: Closed</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-side-note">
+                        <p>Hope this project helped you in some manner. Thank you!<br><br>— <strong>Meyrushan, Laxshika &amp; Kavilakshan</strong></p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-container">
+            <span class="section-eyebrow">Help</span>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How can I access the project documentation?</h3>
+                    <p>
+                        All project documents are available in the Documents section of the website. 
+                        You can download PDFs of proposals, reports, and technical documentation directly.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is the source code available?</h3>
+                    <p>
+                        The source code can be accessed by authorized users. For access requests, 
+                        please contact the team directly with your institution and research details.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I collaborate on this project?</h3>
+                    <p>
+                        Yes! We welcome collaboration opportunities. Please describe your proposed 
+                        collaboration in the contact form and we'll be in touch to discuss possibilities.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does it take to receive a response?</h3>
+                    <p>
+                        We typically respond to inquiries within 2-3 business days. During academic 
+                        breaks, response time may be longer.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is the best time to reach the team?</h3>
+                    <p>
+                        The best time is during office hours (Monday-Friday, 9:00 AM - 5:00 PM local time). 
+                        You can also send emails anytime and we'll respond during business hours.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I cite this project in my research?</h3>
+                    <p>
+                        Yes, please cite the project appropriately. For the recommended citation format, 
+                        please refer to the Final Report or contact the team directly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Contact Directory -->
+    <section class="team-directory">
+        <div class="section-container">
+            <span class="section-eyebrow">Team</span>
+            <h2>Team Contact Directory</h2>
+            <div class="directory-grid">
+                <div class="directory-card">
+                    <h3>Meyrushan</h3>
+                    <p class="directory-email">📧 it22564818@my.sliit.lk</p>
+                    <p class="directory-focus">Project Leader · Data &amp; Prediction Module</p>
+                </div>
+                <div class="directory-card">
+                    <h3>Laxshika</h3>
+                    <p class="directory-email">📧 it22596802@my.sliit.lk</p>
+                    <p class="directory-focus">AI Engineer · Fitness Module</p>
+                </div>
+                <div class="directory-card">
+                    <h3>Kavilakshan</h3>
+                    <p class="directory-email">📧 it22116338@my.sliit.lk</p>
+                    <p class="directory-focus">Full Stack Developer · Mental Health Module</p>
+                </div>
+                <div class="directory-card">
+                    <h3>Dr. Kapila Dissanayaka</h3>
+                    <p class="directory-email">📧 kapila.d@sliit.lk</p>
+                    <p class="directory-focus">Supervisor</p>
+                </div>
+                <div class="directory-card">
+                    <h3>Fathima Fanoon</h3>
+                    <p class="directory-email">📧 fathima.f@sliit.lk</p>
+                    <p class="directory-focus">Co-Supervisor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social & Institutional Links -->
+    <section class="links-section">
+        <div class="section-container">
+            <h2>Connect With Us</h2>
+            <div class="links-content">
+                <div class="links-block">
+                    <h3>Institutional Links</h3>
+                    <ul class="links-list">
+                        <li><a href="https://www.sliit.lk" target="_blank" rel="noopener">SLIIT Website</a></li>
+                        <li><a href="https://www.sliit.lk/faculty-of-computing/" target="_blank" rel="noopener">Faculty of Computing</a></li>
+                        <li><a href="https://www.sliit.lk/research/" target="_blank" rel="noopener">Research Portal</a></li>
+                        <li><a href="https://library.sliit.lk" target="_blank" rel="noopener">Academic Repository</a></li>
+                    </ul>
+                </div>
+                <div class="links-block">
+                    <h3>Project Resources</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="domain.html">Project Domain</a></li>
+                        <li><a href="documents.html">Documentation</a></li>
+                        <li><a href="presentations.html">Presentations</a></li>
+                    </ul>
+                </div>
+                <div class="links-block">
+                    <h3>Support</h3>
+                    <ul class="links-list">
+                        <li><a href="contact.html#faq">FAQ</a></li>
+                        <li><a href="documents.html">Documentation</a></li>
+                        <li><a href="mailto:it22564818@my.sliit.lk">Technical Support</a></li>
+                        <li><a href="mailto:it22564818@my.sliit.lk">Report an Issue</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo"><span class="footer-logo-mark">W</span>Well<span>360</span></a>
+                    <p>An AI-powered health analytics platform combining Hydration, Fitness, and Mental Health monitoring through advanced ML models and a Flutter cross-platform frontend.</p>
+                    <span class="footer-badge">🎓 SLIIT Final Year Research Project</span>
+                    <span class="footer-badge">📅 2025 – 2026</span>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="domain.html">Domain</a></li>
+                        <li><a href="milestones.html">Milestones</a></li>
+                        <li><a href="documents.html">Documents</a></li>
+                        <li><a href="presentations.html">Presentations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="domain.html">Tech Stack</a></li>
+                        <li><a href="domain.html">AI Modules</a></li>
+                        <li><a href="milestones.html">Timeline</a></li>
+                        <li><a href="about.html">Team</a></li>
+                        <li><a href="documents.html">Final Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Team Contact</h4>
+                    <ul>
+                        <li><div class="footer-email"><strong>Meyrushan</strong><a href="mailto:it22564818@my.sliit.lk">it22564818@my.sliit.lk</a></div></li>
+                        <li><div class="footer-email"><strong>Laxshika</strong><a href="mailto:it22596802@my.sliit.lk">it22596802@my.sliit.lk</a></div></li>
+                        <li><div class="footer-email"><strong>Kavilakshan</strong><a href="mailto:it22116338@my.sliit.lk">it22116338@my.sliit.lk</a></div></li>
+                        <li><a href="contact.html" style="color:var(--violet-light);font-weight:600;">→ Send a Message</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p>&copy; 2025 Well360 · SLIIT Final Year Research Project · All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Home</a>
+                    <a href="domain.html">Domain</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script src="main.js"></script>
+</body>
+</html>
