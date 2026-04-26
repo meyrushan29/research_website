@@ -26,6 +26,9 @@
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
+            <button class="nav-search-btn" id="navSearchBtn" aria-label="Search site">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="toggle-bar"></span>
                 <span class="toggle-bar"></span>
@@ -37,6 +40,11 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="section-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">›</span>
+                <span class="breadcrumb-current">Contact</span>
+            </nav>
             <h1>Contact Us</h1>
             <p>Get in touch with the Well360 team</p>
         </div>
@@ -52,13 +60,22 @@
                 <div class="contact-card">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <p class="contact-label">Project Inquiries</p>
-                    <a href="mailto:it22564818@my.sliit.lk" class="contact-link">
-                        it22564818@my.sliit.lk
-                    </a>
-                    <p class="contact-note">
-                        For general inquiries, project information, and collaboration opportunities
-                    </p>
+                    <p class="contact-label">Team Emails</p>
+                    <div class="contact-emails-list">
+                        <div class="contact-email-row">
+                            <span class="contact-email-name">Meyrushan</span>
+                            <a href="mailto:it22564818@my.sliit.lk" class="contact-link">it22564818@my.sliit.lk</a>
+                        </div>
+                        <div class="contact-email-row">
+                            <span class="contact-email-name">Laxshika</span>
+                            <a href="mailto:it22596802@my.sliit.lk" class="contact-link">it22596802@my.sliit.lk</a>
+                        </div>
+                        <div class="contact-email-row">
+                            <span class="contact-email-name">Kavilakshan</span>
+                            <a href="mailto:it22116338@my.sliit.lk" class="contact-link">it22116338@my.sliit.lk</a>
+                        </div>
+                    </div>
+                    <p class="contact-note">For general inquiries, project information, and collaboration opportunities</p>
                 </div>
 
                 <!-- Phone Contact -->
@@ -202,10 +219,10 @@
                     <div class="contact-side-item">
                         <div class="contact-side-icon">📧</div>
                         <div class="contact-side-text">
-                            <p class="contact-side-label">Project Email</p>
-                            <p class="contact-side-value">
-                                <a href="mailto:it22564818@my.sliit.lk">it22564818@my.sliit.lk</a>
-                            </p>
+                            <p class="contact-side-label">Team Emails</p>
+                            <p class="contact-side-value"><a href="mailto:it22564818@my.sliit.lk">it22564818@my.sliit.lk</a></p>
+                            <p class="contact-side-value"><a href="mailto:it22596802@my.sliit.lk">it22596802@my.sliit.lk</a></p>
+                            <p class="contact-side-value"><a href="mailto:it22116338@my.sliit.lk">it22116338@my.sliit.lk</a></p>
                         </div>
                     </div>
 
@@ -240,6 +257,42 @@
                     </div>
                 </aside>
             </div>
+        </div>
+    </section>
+
+    <!-- Email Template Section -->
+    <section class="email-template-section">
+        <div class="section-container">
+            <span class="section-eyebrow">Direct Email</span>
+            <h2>General Email Template</h2>
+            <p class="section-subtitle">Prefer to email directly? Copy the template below, fill in your details, and send it to any of the team emails above.</p>
+
+            <div class="email-template-wrap">
+                <div class="email-template-header">
+                    <span class="email-template-label">📋 Email Template</span>
+                    <button class="copy-template-btn" id="copyTemplateBtn" onclick="copyEmailTemplate()">Copy Template</button>
+                </div>
+                <pre class="email-template-body" id="emailTemplateBody">To: it22564818@my.sliit.lk
+Subject: [Inquiry Type] — Well360 Research Project
+
+Dear Well360 Team,
+
+My name is [Your Full Name].
+Institution / Organisation: [Your Institution or University]
+Inquiry Type: [General Inquiry / Research Question / Collaboration / Technical Support / Feedback]
+
+[Write your message here. Please be specific about your inquiry so the team can respond effectively.]
+
+Kind regards,
+[Your Full Name]
+[Your Email Address]
+[Your Phone Number — optional]</pre>
+            </div>
+
+            <p class="email-template-note">
+                You may also send your email directly to all team members:
+                <a href="mailto:it22564818@my.sliit.lk,it22596802@my.sliit.lk,it22116338@my.sliit.lk">Email All Members</a>
+            </p>
         </div>
     </section>
 
@@ -384,6 +437,8 @@
                         <li><a href="milestones.html">Milestones</a></li>
                         <li><a href="documents.html">Documents</a></li>
                         <li><a href="presentations.html">Presentations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -421,6 +476,21 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <!-- ── Search Overlay ── -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-overlay-backdrop" id="searchBackdrop"></div>
+        <div class="search-overlay-box">
+            <div class="search-overlay-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search Well360..." autocomplete="off" spellcheck="false">
+                <button class="search-close-btn" id="searchClose" aria-label="Close search">✕</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p class="search-hint">Try: "hydration", "milestones", "contact", "team", "documents"</p>
+            </div>
+            <div class="search-shortcut-hint">Press <kbd>Esc</kbd> to close · <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -26,6 +26,9 @@
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
+            <button class="nav-search-btn" id="navSearchBtn" aria-label="Search site">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="toggle-bar"></span>
                 <span class="toggle-bar"></span>
@@ -37,6 +40,11 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="section-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">›</span>
+                <span class="breadcrumb-current">Documents</span>
+            </nav>
             <h1>Project Documents</h1>
             <p>Access all official project documentation and reports</p>
         </div>
@@ -176,6 +184,56 @@
         </div>
     </section>
 
+    <!-- Check List Documents -->
+    <section class="documents-section">
+        <div class="section-container">
+            <span class="section-eyebrow">Checklists</span>
+            <h2>Check List Documents</h2>
+            <p class="components-intro">Project tracking, task management, and repository checklists for the Well360 research project.</p>
+            <div class="documents-grid">
+
+                <!-- Check List Set 1 — GitHub Repository -->
+                <div class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon">📂</div>
+                        <h3>Check List Set 1</h3>
+                    </div>
+                    <div class="document-content">
+                        <p>
+                            Project source code repository on GitHub. Access the complete Well360 codebase
+                            including FastAPI backend, trained ML models, and Flutter cross-platform frontend.
+                        </p>
+                        <div class="document-meta">
+                            <span class="meta-item">🔗 GitHub Repository</span>
+                            <span class="meta-item">📁 Source Code</span>
+                        </div>
+                        <a href="https://github.com/meyrushan29/Research_Project_225" class="doc-btn" target="_blank" rel="noopener">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Check List Set 2 — MS Planner -->
+                <div class="document-card">
+                    <div class="document-header">
+                        <div class="document-icon">✅</div>
+                        <h3>Check List Set 2</h3>
+                    </div>
+                    <div class="document-content">
+                        <p>
+                            Microsoft Planner project management sheet tracking all tasks, responsibilities,
+                            deadlines, and progress milestones for the Well360 research project team.
+                        </p>
+                        <div class="document-meta">
+                            <span class="meta-item">📅 2025 – 2026</span>
+                            <span class="meta-item">📊 Excel Format</span>
+                        </div>
+                        <a href="Documents/CheckList%20set%202/Research_Project_225_MsPlanner.xlsx" class="doc-btn" download>Download Planner</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Research Papers Section -->
     <section class="documents-section">
         <div class="section-container">
@@ -214,7 +272,7 @@
                             correction with explainable feedback using pose estimation models.
                         </p>
                         <div class="document-meta">
-                            <span class="meta-item">👤 Kavilakshan</span>
+                            <span class="meta-item">👤 Laxshika</span>
                             <span class="meta-item">📄 Research Paper</span>
                         </div>
                         <a href="Documents/ReSearch_Paper/A%20Computer%20Vision%20Framework%20for%20Real%20Time%20Exercise%20Classification%20and%20Form%20Correction%20with%20Explainable%20Feedback.pdf" class="doc-btn" download>Download Paper</a>
@@ -233,7 +291,7 @@
                             to evaluate user well-being and deliver personalised recommendations.
                         </p>
                         <div class="document-meta">
-                            <span class="meta-item">👤 Laxshika</span>
+                            <span class="meta-item">👤 Kavilakshan</span>
                             <span class="meta-item">📄 Research Paper</span>
                         </div>
                         <a href="Documents/ReSearch_Paper/Mental_Health%20Assessment%20System.pdf" class="doc-btn" download>Download Paper</a>
@@ -255,6 +313,13 @@
                         <li>Proposal Document</li>
                         <li>Requirements Document</li>
                         <li>Literature Survey</li>
+                    </ul>
+                </div>
+                <div class="category-item">
+                    <h3>Check Lists</h3>
+                    <ul>
+                        <li><a href="https://github.com/meyrushan29/Research_Project_225" target="_blank" rel="noopener">Check List Set 1 — GitHub Repo</a></li>
+                        <li><a href="Documents/CheckList%20set%202/Research_Project_225_MsPlanner.xlsx" download>Check List Set 2 — MS Planner</a></li>
                     </ul>
                 </div>
                 <div class="category-item">
@@ -339,6 +404,8 @@
                         <li><a href="milestones.html">Milestones</a></li>
                         <li><a href="documents.html">Documents</a></li>
                         <li><a href="presentations.html">Presentations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -376,6 +443,21 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <!-- ── Search Overlay ── -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-overlay-backdrop" id="searchBackdrop"></div>
+        <div class="search-overlay-box">
+            <div class="search-overlay-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search Well360..." autocomplete="off" spellcheck="false">
+                <button class="search-close-btn" id="searchClose" aria-label="Close search">✕</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p class="search-hint">Try: "hydration", "milestones", "contact", "team", "documents"</p>
+            </div>
+            <div class="search-shortcut-hint">Press <kbd>Esc</kbd> to close · <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

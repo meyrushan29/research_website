@@ -167,3 +167,118 @@ if (typeEl) {
     }
     type();
 }
+
+/* ── Copy Email Template ── */
+function copyEmailTemplate() {
+    const body = document.getElementById('emailTemplateBody');
+    const btn  = document.getElementById('copyTemplateBtn');
+    if (!body || !btn) return;
+    navigator.clipboard.writeText(body.textContent).then(() => {
+        btn.textContent = '✓ Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy Template'; btn.classList.remove('copied'); }, 2500);
+    }).catch(() => {
+        const range = document.createRange();
+        range.selectNode(body);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => { btn.textContent = 'Copy Template'; }, 2500);
+    });
+}
+
+/* ── Milestone Assessment Dropdown ── */
+function showAssessment(value) {
+    document.querySelectorAll('.assessment-detail-card').forEach(c => c.classList.remove('active'));
+    const target = document.getElementById('detail-' + value);
+    if (target) target.classList.add('active');
+}
+
+/* ── Site Search ── */
+const SEARCH_INDEX = [
+    { icon: '🏠', title: 'Home',             desc: 'Well360 overview, project goals, AI modules, hero',             tag: 'home',          href: 'index.html' },
+    { icon: '🔬', title: 'Project Domain',   desc: 'Literature survey, research gap, objectives, methodology',      tag: 'domain',        href: 'domain.html' },
+    { icon: '🏁', title: 'Milestones',       desc: 'Project timeline, proposal, progress presentations, viva',      tag: 'milestones',    href: 'milestones.html' },
+    { icon: '📄', title: 'Documents',        desc: 'Project charter, proposals, status reports, research papers',   tag: 'documents',     href: 'documents.html' },
+    { icon: '📊', title: 'Presentations',    desc: 'Proposal and progress slides, final presentation, videos',      tag: 'presentations', href: 'presentations.html' },
+    { icon: '👥', title: 'About Us',         desc: 'Team: Meyrushan, Laxshika, Kavilakshan; faculty advisors',     tag: 'about',         href: 'about.html' },
+    { icon: '📬', title: 'Contact',          desc: 'Team emails, SLIIT address, contact form, FAQ',                tag: 'contact',       href: 'contact.html' },
+    { icon: '💧', title: 'Hydration Module', desc: 'XGBoost, MobileNetV2, SHAP, Grad-CAM, lip image, dehydration', tag: 'domain',        href: 'domain.html' },
+    { icon: '🏋️', title: 'Fitness Module',   desc: 'MediaPipe, pose estimation, exercise recognition, form score', tag: 'domain',        href: 'domain.html' },
+    { icon: '🧠', title: 'Mental Health',    desc: 'FER, MTCNN, ResNet, Librosa, emotion detection, stress',       tag: 'domain',        href: 'domain.html' },
+];
+
+const searchBtn      = document.getElementById('navSearchBtn');
+const searchOverlay  = document.getElementById('searchOverlay');
+const searchInput    = document.getElementById('searchInput');
+const searchResults  = document.getElementById('searchResults');
+const searchClose    = document.getElementById('searchClose');
+const searchBackdrop = document.getElementById('searchBackdrop');
+
+function openSearch() {
+    if (!searchOverlay) return;
+    searchOverlay.classList.add('open');
+    searchOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => searchInput && searchInput.focus(), 50);
+    renderSearchResults('');
+}
+
+function closeSearch() {
+    if (!searchOverlay) return;
+    searchOverlay.classList.remove('open');
+    searchOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (searchInput) searchInput.value = '';
+}
+
+function renderSearchResults(query) {
+    if (!searchResults) return;
+    const q = query.toLowerCase().trim();
+    if (!q) {
+        searchResults.innerHTML = '<p class="search-hint">Try: "hydration", "milestones", "contact", "team", "documents"</p>';
+        return;
+    }
+    const matches = SEARCH_INDEX.filter(item =>
+        item.title.toLowerCase().includes(q) ||
+        item.desc.toLowerCase().includes(q) ||
+        item.tag.includes(q)
+    );
+    if (!matches.length) {
+        searchResults.innerHTML = `<p class="search-no-results">No results for "<strong>${query}</strong>" — try a different keyword.</p>`;
+        return;
+    }
+    searchResults.innerHTML = matches.map(item => `
+        <a class="search-result-item" href="${item.href}">
+            <span class="search-result-icon">${item.icon}</span>
+            <span class="search-result-text">
+                <span class="search-result-title">${item.title}</span>
+                <span class="search-result-desc">${item.desc}</span>
+            </span>
+            <span class="search-result-tag">${item.tag}</span>
+        </a>`).join('');
+}
+
+if (searchBtn)      searchBtn.addEventListener('click', openSearch);
+if (searchClose)    searchClose.addEventListener('click', closeSearch);
+if (searchBackdrop) searchBackdrop.addEventListener('click', closeSearch);
+if (searchInput) {
+    searchInput.addEventListener('input', () => renderSearchResults(searchInput.value));
+    searchInput.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('open')) {
+        closeSearch();
+        return;
+    }
+    if ((e.key === 'k' && (e.ctrlKey || e.metaKey)) || e.key === '/') {
+        const tag = document.activeElement.tagName;
+        if (tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') {
+            e.preventDefault();
+            openSearch();
+        }
+    }
+});

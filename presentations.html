@@ -26,6 +26,9 @@
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
+            <button class="nav-search-btn" id="navSearchBtn" aria-label="Search site">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="toggle-bar"></span>
                 <span class="toggle-bar"></span>
@@ -37,6 +40,11 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="section-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">›</span>
+                <span class="breadcrumb-current">Presentations</span>
+            </nav>
             <h1>Project Presentations</h1>
             <p>Explore presentations and slides from all project phases</p>
         </div>
@@ -301,6 +309,8 @@
                         <li><a href="milestones.html">Milestones</a></li>
                         <li><a href="documents.html">Documents</a></li>
                         <li><a href="presentations.html">Presentations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -338,6 +348,21 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <!-- ── Search Overlay ── -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-overlay-backdrop" id="searchBackdrop"></div>
+        <div class="search-overlay-box">
+            <div class="search-overlay-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search Well360..." autocomplete="off" spellcheck="false">
+                <button class="search-close-btn" id="searchClose" aria-label="Close search">✕</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p class="search-hint">Try: "hydration", "milestones", "contact", "team", "documents"</p>
+            </div>
+            <div class="search-shortcut-hint">Press <kbd>Esc</kbd> to close · <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -26,6 +26,9 @@
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
+            <button class="nav-search-btn" id="navSearchBtn" aria-label="Search site">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="toggle-bar"></span>
                 <span class="toggle-bar"></span>
@@ -37,6 +40,11 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="section-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">›</span>
+                <span class="breadcrumb-current">Milestones</span>
+            </nav>
             <h1>Project Milestones</h1>
             <p>Track progress through key project phases</p>
         </div>
@@ -156,6 +164,194 @@
         </div>
     </section>
 
+    <!-- Assessment Dropdown Selector -->
+    <section class="assessment-selector">
+        <div class="section-container">
+            <span class="section-eyebrow reveal">Detailed View</span>
+            <h2 class="reveal">Assessment Details</h2>
+            <p class="section-subtitle reveal">Select an assessment from the dropdown to view its full details, scheduled date, and marks allocation.</p>
+
+            <div class="dropdown-selector-wrap reveal">
+                <label for="assessmentDropdown" class="dropdown-label">Choose an Assessment</label>
+                <div class="custom-select-wrap">
+                    <select id="assessmentDropdown" class="assessment-select" onchange="showAssessment(this.value)">
+                        <option value="proposal">📋  Project Proposal</option>
+                        <option value="pp1">📈  Progress Presentation 1</option>
+                        <option value="pp2">🚀  Progress Presentation 2</option>
+                        <option value="final">🎓  Final Assessment</option>
+                        <option value="viva">🏆  Viva Voce</option>
+                    </select>
+                    <div class="select-arrow">▾</div>
+                </div>
+            </div>
+
+            <div class="assessment-cards-wrap">
+
+                <!-- Project Proposal -->
+                <div class="assessment-detail-card active" id="detail-proposal">
+                    <div class="adc-header">
+                        <div class="adc-icon-wrap">📋</div>
+                        <div>
+                            <h3>Project Proposal</h3>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="adc-body">
+                        <div class="adc-meta-row">
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Date</span>
+                                <span class="adc-meta-value">10 September 2025</span>
+                            </div>
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Marks Allocated</span>
+                                <span class="adc-marks-value">10%</span>
+                            </div>
+                        </div>
+                        <div class="adc-marks-track"><div class="adc-marks-fill" style="width:10%"></div></div>
+                        <p class="adc-desc">Initial project conception and formal proposal submission covering project scope, objectives, methodology, expected outcomes, and resource requirements for the Well360 AI health analytics platform.</p>
+                        <h4 class="adc-del-title">Key Deliverables</h4>
+                        <ul class="adc-del-list">
+                            <li>Formal project proposal document</li>
+                            <li>Problem statement and research objectives</li>
+                            <li>High-level system architecture overview</li>
+                            <li>Project timeline and resource plan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Progress Presentation 1 -->
+                <div class="assessment-detail-card" id="detail-pp1">
+                    <div class="adc-header">
+                        <div class="adc-icon-wrap">📈</div>
+                        <div>
+                            <h3>Progress Presentation 1</h3>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="adc-body">
+                        <div class="adc-meta-row">
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Date</span>
+                                <span class="adc-meta-value">05 January 2026</span>
+                            </div>
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Marks Allocated</span>
+                                <span class="adc-marks-value">15%</span>
+                            </div>
+                        </div>
+                        <div class="adc-marks-track"><div class="adc-marks-fill" style="width:15%"></div></div>
+                        <p class="adc-desc">First progress checkpoint covering literature survey completion, research gap analysis, refined research problem and objectives, finalized methodology, and initial data collection and preprocessing progress.</p>
+                        <h4 class="adc-del-title">Key Deliverables</h4>
+                        <ul class="adc-del-list">
+                            <li>Completed literature survey report</li>
+                            <li>Research gap analysis and problem refinement</li>
+                            <li>Finalized methodology documentation</li>
+                            <li>Initial data collection progress report</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Progress Presentation 2 -->
+                <div class="assessment-detail-card" id="detail-pp2">
+                    <div class="adc-header">
+                        <div class="adc-icon-wrap">🚀</div>
+                        <div>
+                            <h3>Progress Presentation 2</h3>
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="adc-body">
+                        <div class="adc-meta-row">
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Date</span>
+                                <span class="adc-meta-value">09 March 2026</span>
+                            </div>
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Marks Allocated</span>
+                                <span class="adc-marks-value">20%</span>
+                            </div>
+                        </div>
+                        <div class="adc-marks-track"><div class="adc-marks-fill" style="width:20%"></div></div>
+                        <p class="adc-desc">Mid-project review demonstrating trained ML/DL models, system integration progress, preliminary performance results, and working FastAPI backend across all three Well360 modules: Hydration, Fitness, and Mental Health.</p>
+                        <h4 class="adc-del-title">Key Deliverables</h4>
+                        <ul class="adc-del-list">
+                            <li>Trained ML models — XGBoost, MobileNetV2, ResNet</li>
+                            <li>Integrated FastAPI backend with working endpoints</li>
+                            <li>Flutter frontend prototype screens</li>
+                            <li>Preliminary performance metrics and evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Final Assessment -->
+                <div class="assessment-detail-card" id="detail-final">
+                    <div class="adc-header">
+                        <div class="adc-icon-wrap">🎓</div>
+                        <div>
+                            <h3>Final Assessment</h3>
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="adc-body">
+                        <div class="adc-meta-row">
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Date</span>
+                                <span class="adc-meta-value">TBD</span>
+                            </div>
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Marks Allocated</span>
+                                <span class="adc-marks-value">40%</span>
+                            </div>
+                        </div>
+                        <div class="adc-marks-track"><div class="adc-marks-fill" style="width:40%"></div></div>
+                        <p class="adc-desc">Comprehensive project completion assessment covering full system demonstration, final report submission, performance evaluation across all AI modules, integration testing results, and complete technical documentation.</p>
+                        <h4 class="adc-del-title">Key Deliverables</h4>
+                        <ul class="adc-del-list">
+                            <li>Complete final project report</li>
+                            <li>Full system demonstration — all 3 AI modules</li>
+                            <li>Performance evaluation and test results</li>
+                            <li>Docker production deployment</li>
+                            <li>All technical documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Viva Voce -->
+                <div class="assessment-detail-card" id="detail-viva">
+                    <div class="adc-header">
+                        <div class="adc-icon-wrap">🏆</div>
+                        <div>
+                            <h3>Viva Voce</h3>
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="adc-body">
+                        <div class="adc-meta-row">
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Date</span>
+                                <span class="adc-meta-value">TBD</span>
+                            </div>
+                            <div class="adc-meta-item">
+                                <span class="adc-meta-label">Marks Allocated</span>
+                                <span class="adc-marks-value">15%</span>
+                            </div>
+                        </div>
+                        <div class="adc-marks-track"><div class="adc-marks-fill" style="width:15%"></div></div>
+                        <p class="adc-desc">Oral examination and defense of the complete Well360 project before the evaluation committee. Each team member demonstrates system functionality, explains technical decisions, and defends individual research contributions.</p>
+                        <h4 class="adc-del-title">Key Deliverables</h4>
+                        <ul class="adc-del-list">
+                            <li>Live system demonstration to the committee</li>
+                            <li>Technical Q&amp;A on ML models and architecture</li>
+                            <li>Individual contribution defense</li>
+                            <li>Future work and limitations discussion</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Summary Statistics -->
     <section class="milestones-summary">
         <div class="section-container">
@@ -246,6 +442,8 @@
                         <li><a href="milestones.html">Milestones</a></li>
                         <li><a href="documents.html">Documents</a></li>
                         <li><a href="presentations.html">Presentations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -283,6 +481,21 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <!-- ── Search Overlay ── -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <div class="search-overlay-backdrop" id="searchBackdrop"></div>
+        <div class="search-overlay-box">
+            <div class="search-overlay-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="searchInput" class="search-input" placeholder="Search Well360..." autocomplete="off" spellcheck="false">
+                <button class="search-close-btn" id="searchClose" aria-label="Close search">✕</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p class="search-hint">Try: "hydration", "milestones", "contact", "team", "documents"</p>
+            </div>
+            <div class="search-shortcut-hint">Press <kbd>Esc</kbd> to close · <kbd>Ctrl K</kbd> to open</div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
