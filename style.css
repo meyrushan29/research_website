@@ -377,7 +377,7 @@ li { margin-bottom: var(--spacing-sm); color: var(--text-secondary); }
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-2xl);
     align-items: center;
-    padding: 7rem var(--spacing-lg) 6rem;
+    padding: 1.5rem var(--spacing-lg) 3rem;
     background: var(--grad-hero);
     position: relative;
     overflow: hidden;
@@ -3615,7 +3615,7 @@ section { padding: var(--spacing-2xl) var(--spacing-lg); }
 
 /* ── 1200px: Wide tablets / small desktops ── */
 @media (max-width: 1200px) {
-    .hero { padding: 6rem var(--spacing-lg) 5rem; }
+    .hero { padding: 1.5rem var(--spacing-lg) 3rem; }
     .hero-title { font-size: 3.25rem; }
 }
 
